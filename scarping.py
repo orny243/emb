@@ -12,11 +12,11 @@ def save_text_to_file(text,filename):
     try:
         with open(filename,'w', encoding='utf-8') as file:
             file.write(text)
-            print(f"Text successfully saved to {filename}")    
+            print(f"text successfully saved to {filename}")    
     except IOError as e:
             print(f"An error occurred while saving to file: {e}")
 
-save_text_to_file(scra_text,'skin.txt')
+save_text_to_file(scra_text,'skiny.txt')
 
 import re
 from transformers import AlbertTokenizer, AlbertModel
@@ -46,7 +46,7 @@ def get_albert_embedding(document):
         
         return document_embedding
     except Exception as e:
-        print(f"Error during embedding generation: {e}")
+        print(f"error during embedding generation: {e}")
 
 
 def save_embeddings_to_file(embeddings, filename):
